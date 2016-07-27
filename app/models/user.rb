@@ -6,7 +6,6 @@ class User < ActiveRecord::Base
   	validates :cohort, :presence => true
 
   	validates :email, presence: true, uniqueness: { case_sensitive:false }, format: { with: EMAIL_REGEX }
-  	validates :invitecode, presence: == "tacocat"
 
 end
 

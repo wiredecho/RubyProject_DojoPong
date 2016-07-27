@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'user#index'
+  root 'users#index'
   get 'loginreg' => 'loginreg#index'
   post 'users' => "users#create"
   post "sessions" => "sessions#create"

@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: pong_production
-  username: pong
-  password: <%= ENV['PONG_DATABASE_PASSWORD'] %>
+  username: bellalau
+  password: 
