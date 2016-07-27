@@ -5,6 +5,8 @@ class UsersController < ApplicationController
   def create
   	if params[:invitecode] === 'tacocat'
   	 user = User.new(user_params)
+     user.wins=0
+     user.losses=0
       if user.save
         session[:user_id] = user.id
         redirect_to "/dashboard"
