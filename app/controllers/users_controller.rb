@@ -7,19 +7,15 @@ class UsersController < ApplicationController
   	 user = User.new(user_params)
       if user.save
         session[:user_id] = user.id
-        redirect_to :back
+        redirect_to :root
       else
         flash[:errors] = user.errors.full_messages
         redirect_to :back
       end
     else
+      flash[:errors] = ['Your invitecode did not work']
       redirect_to :back
     end
-
-  	# }else{
-  	# 	redirect_to '/'
-  	# }
-
   end
 
   private
