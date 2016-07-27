@@ -1,2 +1,294 @@
-<h1>Sessions#index</h1>
-<p>Find me in app/views/sessions/index.html.erb</p>
+<!DOCTYPE html>
+<!--[if lte IE 9]><html class="no-js is-ie"><![endif]-->
+<!--[if gt IE 8]><!--><html class=no-js><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="BlackTie Free Bootstrap Theme">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	
+
+	<title>Dojo Pong</title>
+	<link rel=stylesheet href="css/main.css">
+	<!--[if lte IE 8]>
+	<link rel=stylesheet href="css/ie.css">
+	<![endif]-->
+		<script src="assets/vendor/modernizr.js"></script>
+
+		<script src="assets/vendor/respond.min.js"></script>
+
+</head>
+
+<body>
+	<div class="level level-hero hero-home has-hint">
+		
+
+		<div class="hero-overlay visible-lg"></div>
+
+		<video loop id=bg-video class=fullscreen-video>
+			<source src="assets/video.mov" type="video/webm">
+			
+
+		</video>
+
+		<div class="container full-height">
+			<div class=v-align-parent>
+				<div class=v-center>
+					<div class="row">
+						<div class="col-xs-10 col-sm-6">
+							<img src="assets/codingdojologo.png">
+							<h1 class="mb-10 heading">Ping Pong league<span>of Burbank Dojo</span></h1>
+							<div class="subheading mb-20">Its not just breaktime from coding<br class=hidden-xs>its about bringing the CRUD to a semi sport </div>
+						</div>
+					</div>
+					<div>
+						<a class="btn btn-prepend btn-launch-video" data-method="delete" href="/sessions" >
+							<i class="prepended icon-append-play"></i>Logout
+						</a>
+						
+					</div>
+				</div>
+			</div>
+
+			<div class=hint-arrow></div>
+		</div>
+	</div>
+
+	
+	
+
+<!-- ****************************  Individual Standings	 -->
+	<div class=level>
+
+		<div class="container mb-100 xs-mb-40">
+			<div class=row>
+				<div class="col-sm-5 col-md-4 col-md-offset-2 col-sm-offset-1">
+					<h1 class="mb-10 xs-mb-10 heading color-dark heading-bordered">INDIVIDUAL<br class=hidden-xs>STANDINGS</h1>
+				</div>
+				<div class="col-sm-5 col-sm-offset-1">
+					<h2 class="w-300 color-dark mb-10 xs-mb-10">Breaktime is Showtime</h2>
+					<p class="xs-mw">You are not playing for fun, you are representing your cohort</p>
+				</div>
+			</div>
+		</div>
+
+<!-- *********************   ranking table ******************************************* -->
+		<div class="bootstrap-demo">
+			<table class="table table-bordered"> <!-- bordered table class -->
+			        <thead><!-- table head-->
+			            <tr>
+			               	<th>Rank</th>
+			                <th>Player</th>
+			                <th>Record</th>
+			              	<th>Cohort</th>
+			            </tr>
+			        </thead>
+					
+			        <tbody>
+			            <tr><!-- Row 1 -->
+			                <td>1</td>
+			                <td>Kelvin Luu</td>
+			                <td>7-0</td>
+			                <td>Sensei</td>
+			            </tr>
+			            <tr><!-- Row 2 -->
+			                <td>2</td>
+			                <td>Eduardo</td>
+			                <td>7-0</td>
+			                <td>Sensei</td>
+			            </tr>
+			            <tr><!-- Row 3 -->
+			                <td>3</td>
+			                <td>Johnathan</td>
+			                <td>7-0</td>
+			                <td>April 2016</td>
+			            </tr>
+			            <tr><!-- Row 4 -->
+			                <td>4</td>
+			                <td>Guac</td>
+			                <td>7-0</td>
+			                <td>TA/DOJO</td>
+			            </tr>
+			            <tr><!-- Row 5 -->
+			                <td>5</td>
+			                <td>Bella Lau</td>
+			                <td>7-0</td>
+			                <td>April 2016</td>
+			            </tr>
+			            <tr><!-- Row 6 -->
+			                <td>6</td>
+			                <td>Lance Robertson</td>
+			                <td>7-0</td>
+			                <td>Sensei</td>
+			            </tr>
+			            <tr><!-- Row 7 -->
+			                <td>7</td>
+			                <td>Phil Lee</td>
+			                <td>7-0</td>
+			                <td>April 2016</td>
+			            </tr>
+			            <tr><!-- Row 8 -->
+			                <td>8</td>
+			                <td>Khoa</td>
+			                <td>7-0</td>
+			                <td>April 2016</td>
+			            </tr>
+			            <tr><!-- Row 9 -->
+			                <td>9</td>
+			                <td>Jesus</td>
+			                <td>7-0</td>
+			                <td>April 2016</td>
+			            </tr>
+			            <tr><!-- Row 10 -->
+			                <td>10</td>
+			                <td>Kevin</td>
+			                <td>7-0</td>
+			                <td>TA/DOJO</td>
+			            </tr>
+			           
+				   </tbody>
+			</table>
+ 		</div>
+ 		<br>
+ 		<br>
+
+
+
+		<div class=container>
+			<div class="row mb-90 xs-mb-0">
+
+				<div class="col-sm-1 col-sm-offset-2">
+					<i class="icon icon-check"></i>
+				</div>
+				<div class="col-sm-3">
+					<h3 class="mb-15">Record a Game</h3>
+					<p class="smaller xs-mb-40 xs-mw">Played a game recently?  Great report it here and contribute to our stats.
+				</div>
+
+				<div class="col-sm-1">
+					<i class="icon icon-calendar"></i>
+				</div>
+				<div class="col-sm-3">
+					<h3 class="mb-15">Submit a Challenge</h3>
+					<p class="smaller xs-mb-40 xs-mw">Let the smack talk begin, challenge another player by hurting their feelings.
+				</div>
+
+			</div>
+
+			<div class=row>
+
+				<div class="col-sm-1 col-sm-offset-2">
+					<i class="icon icon-user"></i>
+				</div>
+				<div class="col-sm-3">
+					<h3 class="mb-15">Create a Mini-Tournament</h3>
+					<p class="smaller xs-mb-40 xs-mw">Find that you are not alone in avoiding your code?  Might as well make an event out of it and create a mini tournament.
+				</div>
+
+				<div class="col-sm-1">
+					<i class="icon icon-clock"></i>
+				</div>
+				<div class="col-sm-3">
+					<h3 class="mb-15">Smack Talk</h3>
+					<p class="smaller xs-mb-40 xs-mw">General channel for even more smack talking...useful tech talk welcome as well.
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="level level-img-right">
+
+		<div class="container xs-mb-30">
+
+			<div class="row mb-60 xs-mb-20">
+				<div class="col-sm-6 col-lg-offset-1 col-lg-5">
+					<h1 class="mb-20 xs-mb-10 heading color-dark heading-bordered xl-heading-outdent">Recent Matches</h1>
+					<h2 class="w-300 color-dark mb-10">Let yourself down not your cohort</h2>
+				<!-- 	<p class=xs-mw>All games are official. -->
+				</div>
+				<table class="table table-bordered"> <!-- bordered table class -->
+			        <thead><!-- table head-->
+			            <tr>
+			               <th>Rank</th>
+			                <th>Cohort</th>
+			                <th>Collective Win %</th>
+			            </tr>
+			        </thead>
+					
+			        <tbody>
+			            <tr><!-- Row 1 -->
+			                <td>1</td>
+			                <td>April 2016</td>
+			                <td>1.000</td>
+
+			            </tr>
+			            <tr><!-- Row 2 -->
+			                <td>2</td>
+			                <td>Sensei</td>
+			                <td>.787</td>
+
+			            </tr>
+			            <tr><!-- Row 3 -->
+			                <td>3</td>
+			                <td>May 2016</td>
+			                <td>.665</td>
+
+			            </tr>
+			            <tr><!-- Row 4 -->
+			                <td>4</td>
+			                <td>June 2016</td>
+			                <td>.333</td>
+
+			            </tr>
+			            <tr><!-- Row 5 -->
+			                <td>5</td>
+			                <td>TA/DOJO</td>
+			                <td>.112</td>
+
+			            </tr>
+			           
+				   </tbody>
+			</table>
+			</div>
+	</div>
+
+	<div class="level level-img-right">
+
+		<div class="container xs-mb-30">
+
+			<div class="row mb-60 xs-mb-20">
+				<div class="col-sm-6 col-lg-offset-1 col-lg-5">
+					<h1 class="mb-20 xs-mb-10 heading color-dark heading-bordered xl-heading-outdent">Smacking Board</h1>
+					<h2 class="w-300 color-dark mb-10">Play hard...then talk shit.</h2>
+				<!-- 	<p class=xs-mw>All games are official. -->
+				</div>
+				
+			</div>
+	</div>
+
+
+	</div>
+	<div class="footer text-center">
+	<p class="fmenu">
+		<a href="index.html">HOME</a> | <a href="http://www.github.com/wiredecho.html">ABOUT</a>
+	</p>
+
+	</div>		
+
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+
+	<script src="assets/bootstrap.min.js"></script>
+	<script src="assets/dropdown.js"></script>
+	<script src="assets/modal.js"></script>
+	<script src="assets/main.js"></script>
+	<!-- //-end- concat_js -->
+
+
+	
+
+</body>
+</html>

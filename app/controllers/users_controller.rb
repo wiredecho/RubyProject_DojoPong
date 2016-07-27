@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   	 user = User.new(user_params)
       if user.save
         session[:user_id] = user.id
-        redirect_to :root
+        redirect_to "/dashboard"
       else
         flash[:errors] = user.errors.full_messages
         redirect_to :back

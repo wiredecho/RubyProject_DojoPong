@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
 		if user && user.authenticate(params[:password])
 			session[:user_id] = user.id
-			redirect_to :root
+			redirect_to "/dashboard"
 		else
 			flash[:errors] = ["You are an imposter!"]
 			redirect_to :back
