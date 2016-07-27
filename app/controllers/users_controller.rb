@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
+    @opponents = User.all.sort_by{|p| -p[:wins]}
   end
 
   def create
