@@ -1,7 +1,10 @@
 class SessionsController < ApplicationController
 	def index
+		@user = User.find(session[:user_id])
+		@opponents = User.all
 	end
 	
+
 
 	def create
 		user = User.find_by(email: params[:email])
