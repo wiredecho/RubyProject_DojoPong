@@ -86,66 +86,16 @@
 			        </thead>
 					
 			        <tbody>
+			        <%= x=1 %>
+			        <% @opponents.each do |m| %>
 			            <tr><!-- Row 1 -->
-			                <td>1</td>
-			                <td>Kelvin Luu</td>
-			                <td>7-0</td>
-			                <td>Sensei</td>
+			                <td><%= x %></td>
+			                <td><%= m.name%></td>
+			                <td>W: <%= m.wins %> - L: <%= m.losses %></td>
+			                <td><%= m.cohort %></td>
 			            </tr>
-			            <tr><!-- Row 2 -->
-			                <td>2</td>
-			                <td>Eduardo</td>
-			                <td>7-0</td>
-			                <td>Sensei</td>
-			            </tr>
-			            <tr><!-- Row 3 -->
-			                <td>3</td>
-			                <td>Johnathan</td>
-			                <td>7-0</td>
-			                <td>April 2016</td>
-			            </tr>
-			            <tr><!-- Row 4 -->
-			                <td>4</td>
-			                <td>Guac</td>
-			                <td>7-0</td>
-			                <td>TA/DOJO</td>
-			            </tr>
-			            <tr><!-- Row 5 -->
-			                <td>5</td>
-			                <td>Bella Lau</td>
-			                <td>7-0</td>
-			                <td>April 2016</td>
-			            </tr>
-			            <tr><!-- Row 6 -->
-			                <td>6</td>
-			                <td>Lance Robertson</td>
-			                <td>7-0</td>
-			                <td>Sensei</td>
-			            </tr>
-			            <tr><!-- Row 7 -->
-			                <td>7</td>
-			                <td>Phil Lee</td>
-			                <td>7-0</td>
-			                <td>April 2016</td>
-			            </tr>
-			            <tr><!-- Row 8 -->
-			                <td>8</td>
-			                <td>Khoa</td>
-			                <td>7-0</td>
-			                <td>April 2016</td>
-			            </tr>
-			            <tr><!-- Row 9 -->
-			                <td>9</td>
-			                <td>Jesus</td>
-			                <td>7-0</td>
-			                <td>April 2016</td>
-			            </tr>
-			            <tr><!-- Row 10 -->
-			                <td>10</td>
-			                <td>Kevin</td>
-			                <td>7-0</td>
-			                <td>TA/DOJO</td>
-			            </tr>
+			            <% x+=1%>
+			            <%end%>
 			           
 				   </tbody>
 			</table>
