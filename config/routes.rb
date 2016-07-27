@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  get 'loginreg/index'
-
   root 'user#index'
   get 'loginreg' => 'loginreg#index'
+  post 'users' => "users#create"
+  post "sessions" => "sessions#create"
+  get "dashboard" => "sessions#index"
+  delete "sessions" => "sessions#destroy"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
