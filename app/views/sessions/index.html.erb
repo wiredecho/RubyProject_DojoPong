@@ -86,11 +86,11 @@
 			        </thead>
 					
 			        <tbody>
-			        <%= x=1 %>
+			        <% x=1 %>
 			        <% @opponents.each do |m| %>
 			            <tr><!-- Row 1 -->
 			                <td><%= x %></td>
-			                <td><%= m.name%></td>
+			                <td><%= m.name.capitalize%></td>
 			                <td><%= m.wins %> - <%= m.losses %></td>
 			                <td><%= m.cohort %></td>
 			            </tr>
