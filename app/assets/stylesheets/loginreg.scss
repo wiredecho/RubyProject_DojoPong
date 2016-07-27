@@ -1,0 +1,23 @@
+// Place all the styles related to the loginreg controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.container login{
+			margin-left: 50%;
+			margin-right:50%;
+		}
+		#box1, #box2{
+			height: 200px;
+			width: 300px;
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			top: 30px;
+		/*	left: 25%;*/
+		}
+	body{
+		background-color: white;
+	}
+
+	.racket{
+		margin-top: 15px;
+	}

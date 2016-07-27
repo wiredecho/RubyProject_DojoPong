@@ -1,0 +1,55 @@
+<!-- *******************    NAVIGATION BAR  ********************** -->
+	
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" >PP King</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="/users">Login</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="mystats.html">myStats</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			   <li><a href="#">Logout</a></li>
+			</ul>
+		</div>
+	</nav>
+<!-- *******************    LOGIN AND REG  ********************** -->
+	<div id="container">
+
+			<center><img src="assets/table_tennis_racket.png" width="100" alt="example"></center>
+
+
+	<!-- <?php 
+	        if($this->session->flashdata('message')){
+	            echo "<div id='warning'><h3>" . $this->session->flashdata('message') . "</h3></div>";
+	        }
+	    ?>	 -->
+
+		<center>
+			<div id="box2">
+				<form action='/users/process' method="post">
+					<h2>Sign In</h2><br>
+					<input type="text" name="email" placeholder="E-mail"><br>
+					<input type="password" name="password" placeholder="Password"><br>
+					<input type="submit" value="Login" class="btn btn-primary"><br>
+				</form>
+			</div>
+			<div id="box1">
+				<form action="/users/add" method="post">
+					<h2>Sign Up</h2><br>
+					<input type="text" name="first_name" placeholder="First Name"><br>
+					<input type="text" name="last_name" placeholder="Last Name"><br>
+					<input type="text" name="email" placeholder="E-mail"><br>
+					<input type="password" name="password" placeholder="password"><br>
+					<input type="password" name="confirm_password" placeholder="confirm password"><br>
+					<input type="text" name="cohort" placeholder="Cohort"><br>
+					
+					<input type="submit" value="Register" class="btn btn-primary"><br>
+				</form>
+			</div>
+		</center>
+	</div>
+</body>
+</html>
