@@ -108,11 +108,62 @@
 		<div class=container>
 			<div class="row mb-90 xs-mb-0">
 
+
+
+<div class="container">
+							 
+
+
+
 				<div class="col-sm-1 col-sm-offset-2">
 					<i class="icon icon-check"></i>
 				</div>
+
+
 				<div class="col-sm-3">
-					<h3 class="mb-15">Record a Game</h3>
+					 <!-- Trigger the modal with a button -->
+							  <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Record A Match</button>
+
+  <!-- Modal -->
+							<div class="modal fade" id="myModal" role="dialog">
+							<div class="modal-dialog">
+
+							  <!-- Modal content-->
+							  <div class="modal-content" style="background-color: #FFDD88">
+							    <div class="modal-header">
+							      <button type="button" class="close" data-dismiss="modal">&times;</button>
+							      <h4 class="modal-title">Record a Match</h4>
+							    </div>
+							    <div class="modal-body">
+
+										<form>
+										
+							      		<select name="" placeholder="Winner"><br>
+							      		
+							      		<% @opponents.each do |m| %>
+									                <option value="<%= m.name%>">Winner: <%= m.name.capitalize%></option>
+									      <%end%> 
+									    </select>
+									<span>  defeated  </span>
+										<select name="" placeholder="Loser"><br>
+							      		
+							      		<% @opponents.each do |m| %>
+									                <option value="<%= m.name%>"><%= m.name.capitalize%> the Loser.</option>
+									      <%end%> 
+									    </select>
+									           
+										</form>
+							    </div>
+										    <div class="modal-footer">
+										      <button type="button" class="btn btn-default" data-dismiss="modal">submit</button>
+										    </div>
+							  </div>
+							  
+							</div>
+							</div>
+
+							
+<!-- ****************** record a game div ends  -->
 					<p class="smaller xs-mb-40 xs-mw">Played a game recently?  Great report it here and contribute to our stats.
 				</div>
 
@@ -126,25 +177,7 @@
 
 			</div>
 
-			<div class=row>
-
-				<div class="col-sm-1 col-sm-offset-2">
-					<i class="icon icon-user"></i>
-				</div>
-				<div class="col-sm-3">
-					<h3 class="mb-15">Create a Mini-Tournament</h3>
-					<p class="smaller xs-mb-40 xs-mw">Find that you are not alone in avoiding your code?  Might as well make an event out of it and create a mini tournament.
-				</div>
-
-				<div class="col-sm-1">
-					<i class="icon icon-clock"></i>
-				</div>
-				<div class="col-sm-3">
-					<h3 class="mb-15">Smack Talk</h3>
-					<p class="smaller xs-mb-40 xs-mw">General channel for even more smack talking...useful tech talk welcome as well.
-				</div>
-
-			</div>
+			
 		</div>
 	</div>
 
@@ -231,9 +264,8 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
-	<script src="assets/bootstrap.min.js"></script>
 	<script src="assets/dropdown.js"></script>
-	<script src="assets/modal.js"></script>
+
 	<script src="assets/main.js"></script>
 	<!-- //-end- concat_js -->
 
