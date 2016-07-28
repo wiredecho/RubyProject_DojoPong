@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--><html class=no-js><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="BlackTie Free Bootstrap Theme">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -108,45 +108,131 @@
 		<div class=container>
 			<div class="row mb-90 xs-mb-0">
 
+
+
+<div class="container">
+							 
+
+
+
 				<div class="col-sm-1 col-sm-offset-2">
 					<i class="icon icon-check"></i>
 				</div>
+
+
 				<div class="col-sm-3">
-					<h3 class="mb-15">Record a Game</h3>
+					 <!-- Trigger the modal with a button -->
+							  <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Record A Match</button>
+
+  <!-- Modal -->
+							<div class="modal fade" id="myModal" role="dialog">
+							<div class="modal-dialog">
+
+							  <!-- Modal content-->
+							  <div class="modal-content" style="background-color: #FFDD88">
+							    <div class="modal-header">
+							      <button type="button" class="close" data-dismiss="modal">&times;</button>
+							      <h4 class="modal-title">Record a Match</h4>
+							    </div>
+							    <div class="modal-body">
+
+										<form>
+										
+							      		<select name="" placeholder="Winner"><br>
+							      		
+							      		<% @opponents.each do |m| %>
+									                <option value="<%= m.name%>">Winner: <%= m.name.capitalize%></option>
+									      <%end%> 
+									    </select>
+									<span>  defeated  </span>
+										<select name="" placeholder="Loser"><br>
+							      		
+							      		<% @opponents.each do |m| %>
+									                <option value="<%= m.name%>"><%= m.name.capitalize%> the Loser.</option>
+									      <%end%> 
+									    </select>
+									           
+										</form>
+							    </div>
+										    <div class="modal-footer">
+										      <button type="button" class="btn btn-default" data-dismiss="modal">submit</button>
+										    </div>
+							  </div>
+							  
+							</div>
+							</div>
+
+							
+
 					<p class="smaller xs-mb-40 xs-mw">Played a game recently?  Great report it here and contribute to our stats.
 				</div>
+
+<!-- ****************** record a game div ends  -->
+
+
+
+
+
+
+
+<!-- *****************************   Submit a challenge  *************************** -->
 
 				<div class="col-sm-1">
 					<i class="icon icon-calendar"></i>
 				</div>
 				<div class="col-sm-3">
-					<h3 class="mb-15">Submit a Challenge</h3>
+					<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Submit a challenge.</button>
+
+  <!-- Modal -->
+							<div class="modal fade" id="myModal" role="dialog">
+							<div class="modal-dialog">
+
+							  <!-- Modal content-->
+							  <div class="modal-content" style="background-color: #FFDD88;">
+							    <div class="modal-header">
+							      <button type="button" class="close" data-dismiss="modal">&times;</button>
+							      <h4 class="modal-title">Record a Match</h4>
+							    </div>
+							    <div class="modal-body">
+
+										<form>
+										
+							      		<select name="" placeholder="Winner"><br>
+							      		
+							      		<% @opponents.each do |m| %>
+									                <option value="<%= m.name%>">Winner: <%= m.name.capitalize%></option>
+									      <%end%> 
+									    </select>
+									<span>  defeated  </span>
+										<select name="" placeholder="Loser"><br>
+							      		
+							      		<% @opponents.each do |m| %>
+									                <option value="<%= m.name%>"><%= m.name.capitalize%> the Loser.</option>
+									      <%end%> 
+									    </select>
+									           
+										</form>
+							    </div>
+										    <div class="modal-footer">
+										      <button type="button" class="btn btn-default" data-dismiss="modal">submit</button>
+										    </div>
+							  </div>
+							  
+							</div>
+							</div>
 					<p class="smaller xs-mb-40 xs-mw">Let the smack talk begin, challenge another player by hurting their feelings.
 				</div>
 
 			</div>
 
-			<div class=row>
-
-				<div class="col-sm-1 col-sm-offset-2">
-					<i class="icon icon-user"></i>
-				</div>
-				<div class="col-sm-3">
-					<h3 class="mb-15">Create a Mini-Tournament</h3>
-					<p class="smaller xs-mb-40 xs-mw">Find that you are not alone in avoiding your code?  Might as well make an event out of it and create a mini tournament.
-				</div>
-
-				<div class="col-sm-1">
-					<i class="icon icon-clock"></i>
-				</div>
-				<div class="col-sm-3">
-					<h3 class="mb-15">Smack Talk</h3>
-					<p class="smaller xs-mb-40 xs-mw">General channel for even more smack talking...useful tech talk welcome as well.
-				</div>
-
-			</div>
+			
 		</div>
 	</div>
+
+
+
+
+
 
 	<div class="level level-img-right">
 
@@ -154,7 +240,7 @@
 
 			<div class="row mb-60 xs-mb-20">
 				<div class="col-sm-6 col-lg-offset-1 col-lg-5">
-					<h1 class="mb-20 xs-mb-10 heading color-dark heading-bordered xl-heading-outdent">Recent Matches</h1>
+					<h1 class="mb-20 xs-mb-10 heading color-dark heading-bordered xl-heading-outdent">Cohort Standings</h1>
 					<h2 class="w-300 color-dark mb-10">Let yourself down not your cohort</h2>
 				<!-- 	<p class=xs-mw>All games are official. -->
 				</div>
@@ -168,36 +254,16 @@
 			        </thead>
 					
 			        <tbody>
+			        <% x=1 %>
+			        <% @opponents.each do |m| %>
 			            <tr><!-- Row 1 -->
-			                <td>1</td>
-			                <td>April 2016</td>
-			                <td>1.000</td>
-
+			                <td><%= x %></td>
+			                <td><%= m.cohort.capitalize%></td>
+			                <td><%= m.wins %> - <%= m.losses %></td>
+			             
 			            </tr>
-			            <tr><!-- Row 2 -->
-			                <td>2</td>
-			                <td>Sensei</td>
-			                <td>.787</td>
-
-			            </tr>
-			            <tr><!-- Row 3 -->
-			                <td>3</td>
-			                <td>May 2016</td>
-			                <td>.665</td>
-
-			            </tr>
-			            <tr><!-- Row 4 -->
-			                <td>4</td>
-			                <td>June 2016</td>
-			                <td>.333</td>
-
-			            </tr>
-			            <tr><!-- Row 5 -->
-			                <td>5</td>
-			                <td>TA/DOJO</td>
-			                <td>.112</td>
-
-			            </tr>
+			            <% x+=1%>
+			            <%end%>
 			           
 				   </tbody>
 			</table>
@@ -231,9 +297,8 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
-	<script src="assets/bootstrap.min.js"></script>
 	<script src="assets/dropdown.js"></script>
-	<script src="assets/modal.js"></script>
+
 	<script src="assets/main.js"></script>
 	<!-- //-end- concat_js -->
 
