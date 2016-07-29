@@ -83,4 +83,9 @@ test:
 production:
   <<: *default
   database: pong_production
+<<<<<<< HEAD
  
+=======
+  username: wiredecho
+  password: 
+>>>>>>> 4813bc89263586d722f189a82e96f269c967ee50
