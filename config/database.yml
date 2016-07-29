@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: pong_production
-  username: wiredecho
+  username: ubuntu
   password: 
