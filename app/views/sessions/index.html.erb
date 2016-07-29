@@ -36,7 +36,9 @@
 				<div class=v-center>
 					<div class="row">
 						<div class="col-xs-10 col-sm-6">
-							<img src="assets/codingdojologo.png"><span id="king_quote"><%= @messages.first.content %></span><br/><span id="king">Defender of the Dojo <%= @opponents.first.name.capitalize%></span>
+							<img src="assets/codingdojologo.png">
+						<!-- 	<span id="king_quote"><%= @messages.first.content %> </span> -->
+							<br/><span id="king">Defender of the Dojo <%= @opponents.first.name.capitalize%></span>
 							<h1 class="mb-10 heading">Team <%= @user.cohort %></h1>
 							<div class="subheading mb-20"><span id="name_session"><%= @user.name %></span>  ( <%= @user.wins %>  -  <%= @user.losses %> )<br class=hidden-md></div>
 						</div>
