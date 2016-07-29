@@ -2,7 +2,6 @@ class SessionsController < ApplicationController
 	def index
 		@user = User.find(session[:user_id])
 		@opponents = User.all.sort_by{|p| -p[:wins]}
-		@games = Game.all
 	end
 	
 
