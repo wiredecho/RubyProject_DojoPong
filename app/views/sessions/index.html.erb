@@ -128,20 +128,23 @@
 
 									<!-- ***************  modal menu for RECORD a MATCH ********************* -->
 									<form action="/games" method="POST">
-				      					<select name="winner" placeholder="Winner"><br>
+										<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+				      					<select name='game[winner_id]' placeholder="Winner"><br>
 				      						<% @opponents.each do |m| %>
-						    				<option value="<%= m.name%>">Winner: <%= m.name.capitalize%></option>
+						    				<option value='<%= m.id %>'>Winner: <%= m.name.capitalize%></option>
 						      				<%end%> 
 						    			</select>
 
 										<span>  defeated  </span>
 
-										<select name="loser" placeholder="Loser"><br>
+										<select name='game[loser_id]' placeholder="Loser"><br>
 				      						<% @opponents.each do |m| %>
-						                		<option value="<%= m.name%>"><%= m.name.capitalize%> the Loser.</option>
+						                		<option value='<%= m.id %>'>the Loser: <%= m.name.capitalize%></option>
 						      				<%end%> 
 						    			</select>
-						    			<button value="submit" class="btn btn-default" >submit</button>
+						    			Winner's Set Score: <input type="text" name="game[wscore]">
+						    			Loser's Set Score: <input type="text" name="game[lscore]">
+						    			<button value="submit" class="btn btn-default">submit</button>
 									</form>
 
 
