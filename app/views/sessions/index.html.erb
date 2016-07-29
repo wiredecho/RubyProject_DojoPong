@@ -36,7 +36,7 @@
 				<div class=v-center>
 					<div class="row">
 						<div class="col-xs-10 col-sm-6">
-							<img src="assets/codingdojologo.png"><span id="king_quote">The North remembers. We know no king but the King in the North whose name is Stark. I don’t care if he’s a bastard. Ned Stark’s blood runs through his veins. He’s my king, from this day until his last day!”</span><br/><span id="king">Defender of the Dojo <%= @opponents.first.name.capitalize%></span>
+							<img src="assets/codingdojologo.png"><span id="king_quote"><%= @messages.first.content %></span><br/><span id="king">Defender of the Dojo <%= @opponents.first.name.capitalize%></span>
 							<h1 class="mb-10 heading">Team <%= @user.cohort %></h1>
 							<div class="subheading mb-20"><span id="name_session"><%= @user.name %></span>  ( <%= @user.wins %>  -  <%= @user.losses %> )<br class=hidden-md></div>
 						</div>
@@ -129,21 +129,21 @@
 									<!-- ***************  modal menu for RECORD a MATCH ********************* -->
 									<form action="/games" method="POST">
 										<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-				      					<select name='game[winner_id]' placeholder="Winner"><br>
+				      					<center><select name='game[winner_id]' placeholder="Winner"><br></center>
 				      						<% @opponents.each do |m| %>
 						    				<option value='<%= m.id %>'>Winner: <%= m.name.capitalize%></option>
 						      				<%end%> 
-						    			</select>
+						    			</select><br/>
 
-										<span>  defeated  </span>
+										<span style="color:red;">  defeated  </span><br/>
 
 										<select name='game[loser_id]' placeholder="Loser"><br>
 				      						<% @opponents.each do |m| %>
 						                		<option value='<%= m.id %>'>the Loser: <%= m.name.capitalize%></option>
 						      				<%end%> 
-						    			</select>
-						    			Winner's Set Score: <input type="text" name="game[wscore]">
-						    			Loser's Set Score: <input type="text" name="game[lscore]">
+						    			</select><br/><br/>
+						    			Winner's Set Score: <input type="text" name="game[wscore]"><br/>
+						    			Loser's Set Score: <input type="text" name="game[lscore]"><br/>
 						    			<button value="submit" class="btn btn-default">submit</button>
 									</form>
 				    			</div>
@@ -233,8 +233,7 @@
 				                <th>score</th>
 				                <th>Winner</th>
 				            </tr>
-				        </thead>
-						
+				        </thead>	
 				        <tbody>
 				        	<% @losers.each do |l| %>
 				      		<% @winners.each do |w| %>
@@ -252,20 +251,32 @@
 
 		<div class="level level-img-right">
 
-			<div class="container xs-mb-30">
+			<div class="container">
 
 				<div class="row mb-60 xs-mb-20">
 					<div class="col-sm-6 col-lg-offset-1 col-lg-5">
 						<h1 class="mb-20 xs-mb-10 heading color-dark heading-bordered xl-heading-outdent">Smacking Board</h1>
 						<h2 class="w-300 color-dark mb-10">Play hard...then talk shit.</h2>
-					<!-- 	<p class=xs-mw>All games are official. -->
 					</div>
-					
 				</div>
+				<div>
+				<div id="messages">
+					<% @messages.each do |m| %>
+					
+
+						<h3><%= m.content %></h3>
+						<h5><%= m.user.name %></h5>
+						<br>
+		
+					<% end %>
+				</div>
+				
+					
+			</div>
 		</div>
 
 
-		</div>
+	</div>
 	
 
 	
