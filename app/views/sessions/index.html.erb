@@ -167,57 +167,57 @@
 <!-- *****************************   Submit a challenge  *************************** -->
 
 
-		<div class="col-sm-1">
-			<i class="icon icon-calendar"></i>
-		</div>
-
-		<div class="col-sm-3">
-			<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">the Wall</button>
-
-			<!-- Modal -->
-			<div class="modal fade" id="myModal" role="dialog">
-				<div class="modal-dialog">
-
-			  		<!-- Modal content-->
-			  		<div class="modal-content" style="background-color: #FFDD88;">
-			    		<div class="modal-header">
-			      			<button type="button" class="close" data-dismiss="modal">&times;</button>
-			      			<h4 class="modal-title">Record a Match</h4>
-			    		</div>
-
-
-
-	<!-- ***************************  fading modal for record a game *********************	 -->						    
-			    		<div class="modal-body">
-
-							<form action="/games" method="POST">
-						
-			      				<select placeholder="Winner"><br>
-			      		
-			      					<% @opponents.each do |m| %>
-					            		<option value="<%= m.name%>">Winner: <%= m.name.capitalize%></option>
-					     			<%end%> 
-					    		</select>
-
-								<span>  defeated  </span>
-						
-								<select name="" placeholder="Loser"><br>
-			      		
-			      					<% @opponents.each do |m| %>
-					            		<option value="<%= m.name%>"><%= m.name.capitalize%> the Loser.</option>
-					      			<%end%> 
-					    		</select>   
-							</form>
-			    
-						    <div class="modal-footer">
-						    	<button type="button" class="btn btn-default" data-dismiss="modal">submit</button>
-						    </div>
-			  			</div>
-			  
-					</div>
+			<% if @user.email == @opponents.first.email %>
+				<div class="col-sm-1">
+					<i class="icon icon-calendar"></i>
 				</div>
-				<p class="smaller xs-mb-40 xs-mw">Let the smack talk begin, challenge another player by hurting their feelings.
-			</div>
+				<div class="col-sm-3">
+					<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">the Wall</button>
+				</div>
+			<%end%>
+
+
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" role="dialog">
+						<div class="modal-dialog">
+					  		<!-- Modal content-->
+					  		<div class="modal-content" style="background-color: #FFDD88;">
+					    		<div class="modal-header">
+					      			<button type="button" class="close" data-dismiss="modal">&times;</button>
+					      			<h4 class="modal-title">Record a Match</h4>
+					    		</div>
+
+
+
+			<!-- ***************************  fading modal for record a game *********************	 -->						    
+					    		<div class="modal-body">
+									<form action="/games" method="POST">
+		
+					      				<select placeholder="Winner"><br>				      		
+					      					<% @opponents.each do |m| %>
+							            		<option value="<%= m.name%>">Winner: <%= m.name.capitalize%></option>
+							     			<%end%> 
+							    		</select>
+
+										<span>  defeated  </span>
+								
+										<select name="" placeholder="Loser"><br>
+					      		
+					      					<% @opponents.each do |m| %>
+							            		<option value="<%= m.name%>"><%= m.name.capitalize%> the Loser.</option>
+							      			<%end%> 
+							    		</select>   
+									</form>
+					    
+								    <div class="modal-footer">
+								    	<button type="button" class="btn btn-default" data-dismiss="modal">submit</button>
+								    </div>
+					  			</div>
+					  
+							</div>
+						</div>
+						<p class="smaller xs-mb-40 xs-mw">Let the smack talk begin, challenge another player by hurting their feelings.
+					</div>
 
 		</div>
 
