@@ -236,9 +236,15 @@
 				        </thead>
 						
 				        <tbody>
-				        
-				      
-				           
+				        	<% @losers.each do |l| %>
+				      		<% @winners.each do |w| %>
+				      		<tr>
+				      		<td><%= w.name %> vs. <%= l.name %></td>
+				      		<td><%= w.wscore %> vs. <%= l.lscore %></td>
+				      		<td><%= w.name %></td>
+				      		</tr>
+				      		<% end %>
+				      		<% end %>
 					   </tbody>
 					</table>
 				</div>

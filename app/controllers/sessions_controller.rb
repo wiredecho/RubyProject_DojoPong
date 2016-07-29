@@ -2,7 +2,8 @@ class SessionsController < ApplicationController
 	def index
 		@user = User.find(session[:user_id])
 		@opponents = User.all.sort_by{|p| -p[:wins]}
-		@games = Game.all
+		@losers = Game.joins(:loser).select("users.name, games.lscore")
+		@winners = Game.joins(:winner).select("users.name, games.wscore")
 		
 	end
 	
