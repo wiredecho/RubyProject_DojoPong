@@ -20,7 +20,7 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-  username: wiredecho
+  username: ubuntu
   password: 
 
 development:
@@ -82,10 +82,6 @@ test:
 #
 production:
   <<: *default
-<<<<<<< HEAD
   database: pong_production
-  username: wiredecho
+  username: ubuntu
   password: 
-=======
-  database: pong_production
->>>>>>> b2fc254e14402a8683d943e5d82fff4cc07226c5
